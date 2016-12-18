@@ -1,12 +1,12 @@
 #!/bin/bash
 #https://github.com/mtanlee07/vim-go-ide.git
-
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 go get -u github.com/jstemmer/gotags
-cp /srv/bin/gotags /usr/local/bin
+cp $GOPATH/bin/gotags /usr/local/bin
 go get -u github.com/nsf/gocode
 cd $GOPATH/src/nsf/gocode/vim
 ./update.sh 
-
+cd -
 apt-get install ctags
 
 #cat >> ~/.vimrc<<EOF
