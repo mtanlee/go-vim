@@ -4,7 +4,7 @@ curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.c
 go get -u github.com/jstemmer/gotags
 cp $GOPATH/bin/gotags /usr/local/bin
 go get -u github.com/nsf/gocode
-cd $GOPATH/src/nsf/gocode/vim
+cd $GOPATH/src/github.com/nsf/gocode/vim
 ./update.sh 
 cd -
 apt-get install ctags
@@ -14,7 +14,7 @@ apt-get install ctags
 #let g:NERDTreeDirArrowExpandable = '▸'
 #let g:NERDTreeDirArrowCollapsible = '▾'
 #EOF
-cat >> ~/.vimrc<<EOF
+cat >> ~/.vimrc<<'EOF'
 " A sensible vimrc for Go development
 "
 " Please note that the following settings are some default that I used
